@@ -9,7 +9,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Toaster } from 'react-hot-toast';
 import rootReducer from './reducer/index';
 
-const store = configureStore({
+export const store = configureStore({
   reducer: rootReducer,
 });
 

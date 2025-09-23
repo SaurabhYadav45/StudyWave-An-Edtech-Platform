@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { isTokenValid } from "../utils/auth";
+
+const storedToken = localStorage.getItem("token") ? JSON.parse(localStorage.getItem("token")) : null;
 
 const initialState = {
     signupData: null,
     loading: false,
-    token:localStorage.getItem("token") ? JSON.parse(localStorage.getItem("token")) : null,
+    token: isTokenValid(storedToken) ? storedToken : null,
 }
 
 const authSlice = createSlice({

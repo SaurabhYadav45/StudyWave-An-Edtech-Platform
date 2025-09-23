@@ -187,22 +187,29 @@ exports.login = async(req, res) =>{
                 accountType:user.accountType,
             }
             const token = jwt.sign(payload, process.env.JWT_SECRET, {
-                expiresIn: "24h",
+                expiresIn: "1m",
             });
-            user.token = token; /// DOUBT
+            
             user.password = undefined;
 
-            //Create cookie
-            const options = {
-                expires: new Date(Date.now() + 3*24*60*60*1000),
-                httpOnly: true,
-            }
-            res.cookie("token", token, options).status(200).json({
-                success:true,
+            return res.status(200).json({
+                success: true,
                 token,
                 user,
-                message:"Logged in successfully",
-            })
+                message: "Logged in successfully",
+            });
+
+            //Create cookie
+            // const options = {
+            //     expires: new Date(Date.now() + 3*24*60*60*1000),
+            //     httpOnly: true,
+            // }
+            // res.cookie("token", token, options).status(200).json({
+            //     success:true,
+            //     token,
+            //     user,
+            //     message:"Logged in successfully",
+            // })
         }
         else{
             return res.status(401).json({
