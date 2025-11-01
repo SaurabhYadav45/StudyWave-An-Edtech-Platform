@@ -1,0 +1,243 @@
+.
+├── .env
+├── .gitignore
+├── .prettierignore
+├── package-lock.json
+├── package.json
+├── prettier.config.js
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo.png
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+├── server
+│   ├── .env
+│   ├── .gitignore
+│   ├── config
+│   │   ├── cloudinary.js
+│   │   ├── database.js
+│   │   └── razorpay.js
+│   ├── controllers
+│   │   ├── Auth.js
+│   │   ├── Category.js
+│   │   ├── ContactUs.js
+│   │   ├── Course.js
+│   │   ├── CourseProgress.js
+│   │   ├── Payment.js
+│   │   ├── Profile.js
+│   │   ├── RatingAndReview.js
+│   │   ├── ResetPassword.js
+│   │   ├── Section.js
+│   │   └── SubSection.js
+│   ├── index.js
+│   ├── mail
+│   │   └── templates
+│   │       ├── contactFormRes.js
+│   │       ├── courseEnrollmentEmail.js
+│   │       ├── emailVerificationTemplate.js
+│   │       ├── passwordUpdate.js
+│   │       ├── paymentSuccessEmail.js
+│   │       └── StudyWaveYellowBg.png
+│   ├── middlewares
+│   │   └── auth.js
+│   ├── models
+│   │   ├── Category.js
+│   │   ├── Course.js
+│   │   ├── CourseProgress.js
+│   │   ├── OTP.js
+│   │   ├── Profile.js
+│   │   ├── RatingAndReview.js
+│   │   ├── Section.js
+│   │   ├── SubSection.js
+│   │   └── User.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   ├── contact.js
+│   │   ├── course.js
+│   │   ├── payment.js
+│   │   ├── profile.js
+│   │   └── user.js
+│   └── utils
+│       ├── imageUploader.js
+│       ├── mailSender.js
+│       └── secToDuration.js
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── assets
+│   │   ├── Images
+│   │   │   ├── aboutus1.webp
+│   │   │   ├── aboutus2.webp
+│   │   │   ├── aboutus3.webp
+│   │   │   ├── banner.mp4
+│   │   │   ├── bghome.svg
+│   │   │   ├── boxoffice.png
+│   │   │   ├── Compare_with_others.png
+│   │   │   ├── Compare_with_others.svg
+│   │   │   ├── FoundingStory.png
+│   │   │   ├── frame.png
+│   │   │   ├── Instructor.png
+│   │   │   ├── Know_your_progress.png
+│   │   │   ├── Know_your_progress.svg
+│   │   │   ├── login.webp
+│   │   │   ├── Plan_your_lessons.png
+│   │   │   ├── Plan_your_lessons.svg
+│   │   │   ├── signup.webp
+│   │   │   └── TimelineImage.png
+│   │   ├── Logo
+│   │   │   ├── desktop.ini
+│   │   │   ├── Logo-Full-Dark.png
+│   │   │   ├── Logo-Full-Light.png
+│   │   │   ├── Logo-Small-Dark.png
+│   │   │   ├── Logo-Small-Light.png
+│   │   │   ├── rzp_logo.png
+│   │   │   ├── StudyWave Org.png
+│   │   │   ├── StudyWave _Yellow.png
+│   │   │   ├── StudyWave1.png
+│   │   │   └── StudyWave_YellowBg.png
+│   │   └── TimeLineLogo
+│   │       ├── Logo1.svg
+│   │       ├── Logo2.svg
+│   │       ├── Logo3.svg
+│   │       └── Logo4.svg
+│   ├── components
+│   │   └── core
+│   │       ├── AboutPage
+│   │       │   ├── ContactFormSection.jsx
+│   │       │   ├── LearningGrid.jsx
+│   │       │   ├── Quote.jsx
+│   │       │   └── Stats.jsx
+│   │       ├── Auth
+│   │       │   ├── LoginForm.jsx
+│   │       │   ├── OpenRoute.jsx
+│   │       │   ├── PrivateRoute.jsx
+│   │       │   ├── ProfileDropdown.jsx
+│   │       │   ├── SignupForm.jsx
+│   │       │   └── Template.jsx
+│   │       ├── Catalog
+│   │       │   ├── Course_Card.jsx
+│   │       │   └── Course_Slider.jsx
+│   │       ├── common
+│   │       │   ├── ConfirmationModal.jsx
+│   │       │   ├── Footer.jsx
+│   │       │   ├── IconBtn.jsx
+│   │       │   ├── Navbar.jsx
+│   │       │   ├── RatingStars.jsx
+│   │       │   ├── ReviewSlider.jsx
+│   │       │   ├── SidebarMenu.jsx
+│   │       │   └── Tab.jsx
+│   │       ├── ContactUsPage
+│   │       │   ├── ContactDetails.jsx
+│   │       │   ├── ContactForm.jsx
+│   │       │   └── ContactUsForm.jsx
+│   │       ├── course
+│   │       │   ├── CourseAccordionBar.jsx
+│   │       │   ├── CourseDetailCard.jsx
+│   │       │   └── CourseSubsectionAccordion.jsx
+│   │       ├── Dashboard
+│   │       │   ├── AddCourse
+│   │       │   │   ├── CourseBuilder
+│   │       │   │   │   ├── CourseBuilderForm.jsx
+│   │       │   │   │   ├── NestedView.jsx
+│   │       │   │   │   └── SubsectionModal.jsx
+│   │       │   │   ├── CourseInformation
+│   │       │   │   │   ├── ChipInput.jsx
+│   │       │   │   │   ├── CourseInformationForm.jsx
+│   │       │   │   │   └── RequirementsField.jsx
+│   │       │   │   ├── index.jsx
+│   │       │   │   ├── PublishCourse
+│   │       │   │   │   └── index.jsx
+│   │       │   │   ├── RenderSteps.jsx
+│   │       │   │   └── Upload.jsx
+│   │       │   ├── Cart
+│   │       │   │   ├── index.jsx
+│   │       │   │   ├── RenderCartCourses.jsx
+│   │       │   │   └── RenderTotalAmount.jsx
+│   │       │   ├── EditCourse
+│   │       │   │   └── index.jsx
+│   │       │   ├── EnrolledCourses.jsx
+│   │       │   ├── Instructor.jsx
+│   │       │   ├── InstructorCourses
+│   │       │   │   └── CoursesTable.jsx
+│   │       │   ├── InstructorDashboard
+│   │       │   │   └── InstructorChart.jsx
+│   │       │   ├── MyCourses.jsx
+│   │       │   ├── MyProfile.jsx
+│   │       │   ├── Settings
+│   │       │   │   ├── ChangeProfilePicture.jsx
+│   │       │   │   ├── DeleteAccount.jsx
+│   │       │   │   ├── EditProfile.jsx
+│   │       │   │   ├── index.jsx
+│   │       │   │   └── UpdatePassword.jsx
+│   │       │   ├── Sidebar.jsx
+│   │       │   └── SidebarLink.jsx
+│   │       ├── HomePage
+│   │       │   ├── Button.jsx
+│   │       │   ├── Codeblocks.jsx
+│   │       │   ├── CourseCard.jsx
+│   │       │   ├── ExploreMore.jsx
+│   │       │   ├── HighlightText.jsx
+│   │       │   ├── InstructorSection.jsx
+│   │       │   ├── LearningLanguageSection.jsx
+│   │       │   └── TimelineSection.jsx
+│   │       └── ViewCourse
+│   │           ├── CourseReviewModal.jsx
+│   │           ├── VideoDetails.jsx
+│   │           └── VideoDetailsSidebar.jsx
+│   ├── data
+│   │   ├── countrycode.json
+│   │   ├── dashboard-links.js
+│   │   ├── footer-links.js
+│   │   ├── homepage-explore.js
+│   │   └── navbar-links.js
+│   ├── hooks
+│   │   └── useOnClickOutside.jsx
+│   ├── index.css
+│   ├── index.js
+│   ├── pages
+│   │   ├── AboutUs.jsx
+│   │   ├── Catalog.jsx
+│   │   ├── Contact.jsx
+│   │   ├── CourseDetails.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Error.jsx
+│   │   ├── ForgotPassword.jsx
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Signup.jsx
+│   │   ├── UpdatePassword.jsx
+│   │   ├── VerifyEmail.jsx
+│   │   └── ViewCourse.jsx
+│   ├── reducer
+│   │   └── index.jsx
+│   ├── reportWebVitals.js
+│   ├── services
+│   │   ├── apiConnector.jsx
+│   │   ├── apis.jsx
+│   │   ├── formatDate.jsx
+│   │   └── operations
+│   │       ├── authAPI.jsx
+│   │       ├── courseDetailAPI.jsx
+│   │       ├── PageAndComponentData.jsx
+│   │       ├── ProfileAPI.jsx
+│   │       ├── SettingsAPI.jsx
+│   │       └── studentFeaturesAPI.jsx
+│   ├── setupTests.js
+│   ├── slices
+│   │   ├── authSlice.jsx
+│   │   ├── cartSlice.jsx
+│   │   ├── courseSlice.jsx
+│   │   ├── profileSlice.jsx
+│   │   └── viewCourseSlice.jsx
+│   └── utils
+│       ├── auth.js
+│       ├── avgRating.jsx
+│       ├── constants.jsx
+│       └── dateFormatter.jsx
+└── tailwind.config.js
